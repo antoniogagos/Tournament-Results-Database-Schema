@@ -13,5 +13,5 @@ Python module that uses the PostgreSQL database to keep track of players and mat
   1. Clone the project (git clone https://github.com/balusus/Tournament-Results-Database-Schema.git)
   2. Install virtual box + vagrant on your pc
   3. Inside your virtual machine move to /vagrant/tournament directory
-  4. Load Database SQL schema by writing in the console:    <em>psql tournament < tournament.sql
+  4. Load Database SQL schema by writing in the console:    <em>psql tournament < tournament.sql </em>
   5. To test client program run the tournament_test.py file
