@@ -38,9 +38,8 @@ def deletePlayers():
 def countPlayers():
     """Returns the number of players currently registered."""
     db, cursor = connect()
-    query = "SELECT COUNT(id) FROM players"
-    parameter = (id)
-    cursor.execute(query, parameter)
+    query = "SELECT COUNT(*) FROM players"
+    cursor.execute(query)
 
     all_players = cursor.fetchone()[0]
     return all_players
@@ -54,7 +53,7 @@ def registerPlayer(name):
       name: the player's full name (need not be unique).
     """
     db, cursor = connect()
-    query = "INSERT INTO players (name) VALUES (%s)"
+    query = "INSERT INTO players(name) VALUES (%s)"
     parameter = (name,)
     cursor.execute(query, parameter)
 
