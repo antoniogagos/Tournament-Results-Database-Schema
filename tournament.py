@@ -39,7 +39,8 @@ def countPlayers():
     """Returns the number of players currently registered."""
     db, cursor = connect()
     query = "SELECT COUNT(id) FROM players"
-    cursor.execute(query)
+    parameter = (id)
+    cursor.execute(query, parameter)
 
     all_players = cursor.fetchone()[0]
     return all_players
