@@ -18,8 +18,8 @@ CREATE TABLE players(
 -- Games table
 CREATE TABLE matches(
 	match_id SERIAL PRIMARY KEY,
-	match_loser INT REFERENCES players(player_id),
-	match_winner INT REFERENCES players(player_id)
+	match_loser INT REFERENCES players(id),
+	match_winner INT REFERENCES players(id)
 );
 
 CREATE View player_standings AS
